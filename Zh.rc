@@ -1,0 +1,37 @@
+#include "resource.h"
+
+/* Chinese text is encoded in UTF-8 */
+#pragma code_page(65001)
+
+IDR_MYMENU MENU// LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",     ID_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",  ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",     ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",         ID_FILE_SAVEAS
+        MENUITEM "关闭(&C)\tCtrl+C",     ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&E)",             ID_FILE_EXIT
+    END
+
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",     ID_EDIT_UNDO
+        MENUITEM "重做(&R)\tCtrl+R",     ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",     ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",     ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",     ID_EDIT_PASTE
+        MENUITEM "删除(&D)\tDel",        ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&A)",             ID_EDIT_SELECTALL
+        MENUITEM "插入日期和时间(&T)\tF5", ID_EDIT_TIMEDATE
+    END
+
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A)...",        ID_HELP_ABOUT
+    END
+END

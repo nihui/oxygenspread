@@ -1,0 +1,87 @@
+/*
+    This file is part of OxygenSpread project
+    Copyright (C) 2009 Ni Hui <shuizhuyuanluo@126.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "resource.h"
+
+//LANGUAGE LANG_ENGLISH, SUBLANG_DEFAULT
+
+IDR_MYMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                    ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",                ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",                   ID_FILE_SAVE
+        MENUITEM "Save &As...",                     ID_FILE_SAVEAS
+        MENUITEM "&Close\tCtrl+C",                  ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                           ID_FILE_EXIT
+    END
+
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",                   ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+R",                   ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "&Cut\tCtrl+X",                    ID_EDIT_CUT
+        MENUITEM "C&opy\tCtrl+C",                   ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",                  ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                 ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "&Select all\tCtrl+A",             ID_EDIT_SELECTALL
+        MENUITEM "&Insert time and date\tF5",   ID_EDIT_TIMEDATE
+    END
+
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Show Grid",                  ID_VIEW_SHOWGRID
+        MENUITEM "S&plit/Restore View",         ID_VIEW_SPLITVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "x 0.6",                      ID_VIEW_P60
+        MENUITEM "x 1.0",                      ID_VIEW_P100
+        MENUITEM "x 2.0",                      ID_VIEW_P200
+    END
+
+    POPUP "F&ormat"
+    BEGIN
+        MENUITEM "&Font...",                          ID_FORMAT_FONT
+        MENUITEM "&Background Color...",              ID_FORMAT_BGCOLOR
+        MENUITEM SEPARATOR
+        MENUITEM "Co&mbine Cells",                    ID_FORMAT_COMBINECELLS
+        MENUITEM "&Split Cells",                      ID_FORMAT_SPLITCELLS
+        MENUITEM SEPARATOR
+        MENUITEM "&Align Left",                      ID_ALIGN_LEFT
+        MENUITEM "A&lign Right",                     ID_ALIGN_RIGHT
+        MENUITEM "Al&ign Center",                    ID_ALIGN_CENTER
+        MENUITEM SEPARATOR
+        MENUITEM "&Clear format",                      ID_FORMAT_CLEARFORMAT
+    END
+
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                          ID_HELP_ABOUT
+    END
+END
+
+STRINGTABLE DISCARDABLE
+{
+STRING_OPEN_ACCESS_DENIED,  "Open Access Denied.\n"
+STRING_OPEN_FAILED,         "Open Failed.\n"
+STRING_WRITE_ACCESS_DENIED, "Write Access Denied.\n"
+STRING_WRITE_FAILED,        "Write Failed.\n"
+}
